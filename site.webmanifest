@@ -1,11 +1,12 @@
 {
   "name": "JavaScript Visualmente",
   "short_name": "JS Visualmente",
+  "id": "./",
   "lang": "pt-BR",
   "start_url": "./",
   "display": "standalone",
   "theme_color": "#10131d",
   "background_color": "#10131d",
-  "description": "Laboratório interativo em português para aprender JavaScript praticando.",
+  "description": "Laboratório interativo em português com 50 experimentos para aprender JavaScript praticando.",
   "icons": [{"src":"public/assets/favicon.svg","sizes":"any","type":"image/svg+xml"}]
 }
