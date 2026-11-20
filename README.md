@@ -1,6 +1,6 @@
 # JavaScript Visualmente
 
-![Banner do JavaScript Visualmente](public/assets/javascript-visualmente-og.png)
+![Banner do JavaScript Visualmente](public/assets/javascript-visualmente-og-v2.png)
 
 ## Sobre o projeto
 
@@ -17,15 +17,17 @@ O site possui aulas sobre:
 - repetições com `for`;
 - funções;
 - arrays e objetos;
-- JSON e dados de sensores;
+- JSON e dados estruturados;
 - mudanças em páginas com DOM;
 - tratamento de erros;
 - `async`, `await` e promessas;
 - ideias básicas de HTTP e APIs.
 
-Os exemplos usam situações simples, como estoque, entregas, sensores e máquinas. Eles foram escritos para este projeto e apenas se inspiram nos temas estudados no [Curso SENAI](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND). Este site não é um material oficial do SENAI.
+Os exemplos usam situações simples, como estoque, entregas, rotas, formulários e dados do navegador. Eles foram escritos para este projeto e apenas se inspiram nos temas estudados no [Curso SENAI](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND). Este site não é um material oficial do SENAI.
 
-Além da trilha guiada, o site mantém um catálogo de referência com 50 experimentos organizados em três grupos: JavaScript essencial, JavaScript no navegador e JavaScript para backend. Cada item combina uma explicação curta, código editável e um desafio para continuar testando.
+Além da trilha guiada, o site mantém um catálogo de referência com 50 experimentos organizados em três grupos recolhíveis: JavaScript essencial, JavaScript no navegador e JavaScript para backend. Cada item combina uma explicação curta, código editável e um desafio para continuar testando.
+
+A barra lateral também traz a seção **Tags mais usadas**, com atalhos para `console`, `const`, `function`, `array`, `object`, `class`, `DOM`, `eventos`, `fetch`, `async`, `await`, `Promise`, `JSON`, `import`, `Node.js` e `Error`. No celular, use o botão **☰ Recursos** no cabeçalho para abrir essa barra.
 
 ## O que é o playground?
 
@@ -38,6 +40,10 @@ O playground é a área em que você testa o código.
 5. Observe a saída e tente o desafio proposto.
 
 O código é executado dentro de uma área separada do site. Isso evita que o exemplo altere a página principal. O código digitado não é enviado para um servidor.
+
+### Navegação e filtros
+
+Use a busca e os filtros por trilha para encontrar uma aula. Os cabeçalhos dos três grupos podem ser recolhidos individualmente, e o botão **Recolher** minimiza o catálogo inteiro para liberar espaço ao laboratório. No celular, **☰ Recursos** abre a barra lateral sem sair da página.
 
 ## Como usar o site
 
@@ -55,11 +61,15 @@ Ao abrir o site pelo GitHub Pages, o navegador pode oferecer a opção **Instala
 - `public/style.css`: cores, tamanhos, layout e versão para celular.
 - `public/script.js`: busca, filtros, tema, progresso e execução do código.
 - `public/data/lessons.json`: textos e exemplos das aulas.
-- `public/assets/`: favicon e banner usado nas redes sociais.
+- `public/assets/`: favicon e banner usado nas redes sociais e prévias de compartilhamento.
 - `robots.txt` e `sitemap.xml`: arquivos que ajudam os buscadores a encontrar o site.
 - `.github/workflows/pages.yml`: verificação automática dos arquivos do projeto.
 
 O projeto usa apenas **HTML, CSS e JavaScript**. Não usa TypeScript, framework, banco de dados ou servidor próprio.
+
+## Compartilhamento e SEO
+
+O site possui título, descrição, canonical, dados estruturados `LearningResource`, Open Graph e Twitter Card em `index.html`. O banner de compartilhamento atualizado está em `public/assets/javascript-visualmente-og-v2.png`. `robots.txt` aponta para o `sitemap.xml`, e o manifesto mantém os dados necessários para a opção **Instalar app** do GitHub Pages.
 
 ## GitHub Pages
 
