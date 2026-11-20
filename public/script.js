@@ -6,7 +6,7 @@
   const runStatus = $('#run-status');
   const completeButton = $('#complete-lesson');
   const searchInput = $('#lesson-search');
-  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1', catalog: 'jsvisual.catalog-collapsed.v1' };
+  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1', catalog: 'jsvisual.catalog-drawer.v1' };
   let lessons = [];
   let activeLesson = null;
   let category = 'all';
