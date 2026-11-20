@@ -39,13 +39,14 @@ O código é executado dentro de uma área separada do site. Isso evita que o ex
 
 ## Como usar o site
 
-Para visitar o site, basta abrir o arquivo `index.html` em um servidor local ou publicar o projeto. Para testar no computador com Python instalado, execute na pasta do projeto:
+Você pode usar o site diretamente pelo navegador:
 
-```bash
-python3 -m http.server 3000
-```
+- [Abrir o JavaScript Visualmente no GitHub Pages](https://gabrielaraujo-eng.github.io/JavaScript-Visualmente/);
+- [Baixar o projeto completo em formato ZIP](https://github.com/gabrielaraujo-eng/JavaScript-Visualmente/archive/refs/heads/main.zip).
 
-Depois, abra [http://localhost:3000](http://localhost:3000) no navegador. É melhor usar um servidor local do que abrir o arquivo diretamente, porque as aulas são carregadas de um arquivo JSON.
+O arquivo ZIP contém o site completo. Depois de baixar, extraia a pasta e abra o `index.html`. Para usar todas as aulas corretamente, prefira o link do GitHub Pages, porque ele já abre o projeto em um endereço web.
+
+No celular, também é possível usar o menu do navegador para adicionar o site à tela inicial, quando essa opção estiver disponível.
 
 ## Arquivos principais
 
@@ -61,7 +62,7 @@ O projeto usa apenas **HTML, CSS e JavaScript**. Não usa TypeScript, framework,
 
 ## GitHub Pages
 
-O projeto já possui `index.html` na raiz, que é o formato esperado pelo GitHub Pages. A publicação deve ser ativada manualmente pelo dono do repositório em **Settings → Pages**. O workflow do projeto apenas verifica os arquivos e não publica sozinho.
+O projeto já possui `index.html` na raiz, que é o formato esperado pelo GitHub Pages. A versão online está disponível em [gabrielaraujo-eng.github.io/JavaScript-Visualmente](https://gabrielaraujo-eng.github.io/JavaScript-Visualmente/). O workflow do projeto verifica os arquivos e não exige Python ou outra instalação para quem só quer usar o site.
 
 ## Referências visuais
 
