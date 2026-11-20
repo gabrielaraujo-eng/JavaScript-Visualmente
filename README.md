@@ -1,50 +1,74 @@
 # JavaScript Visualmente
 
-Laboratório interativo em português para aprender JavaScript na prática: leia uma ideia, edite um exemplo, rode o código e observe a saída. O projeto é estático, gratuito e não exige instalação para quem visita o site.
+![Banner do JavaScript Visualmente](public/assets/javascript-visualmente-og.png)
 
-## O que existe
+## Sobre o projeto
 
-O catálogo começa com trilhas de fundamentos, lógica, dados, web e conexões com backend. Há aulas sobre console, variáveis, tipos, operadores, condicionais, laços, funções, arrays, objetos, JSON, DOM, tratamento de erros, modularização, `async`/`await` e o desenho de uma API HTTP.
+O **JavaScript Visualmente** é um site gratuito para aprender JavaScript praticando. Ele foi feito para quem está começando e quer entender o que o código faz sem precisar instalar programas.
 
-Os exemplos são autorais e usam temas de logística, sensores, estoque e serviços para aproximar o estudo do contexto de desenvolvimento de sistemas. A seleção temática foi inspirada pela organização e pelos assuntos encontrados no [Curso_senai](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND), sem reproduzir aulas e sem apresentar este laboratório como material oficial do SENAI. A clareza visual também dialoga com [Matemática Blitz](https://github.com/gabrielaraujo-eng/matematica-blitz), [Provão Paulista 2027](https://github.com/gabrielaraujo-eng/provao-paulista-2027) e o [Laboratório Visual de HTML & CSS](https://loboratorio-html.vercel.app/).
+No site, cada aula explica uma ideia de JavaScript e mostra um exemplo. Você pode alterar o código, clicar em **Rodar código** e ver o resultado na hora.
 
-## Estrutura
+## O que dá para aprender
 
-- `index.html`: entrada na raiz, conteúdo semântico e metadados para GitHub Pages.
-- `public/style.css`: identidade visual, responsividade, contraste, foco e tema claro/escuro.
-- `public/script.js`: catálogo, busca, filtros, progresso local e playground.
-- `public/data/lessons.json`: conteúdo editorial das aulas.
-- `public/assets/`: favicon e arte social OG.
-- `public/manus-routes.json`: manifesto de rotas do projeto.
-- `robots.txt`, `sitemap.xml`, `site.webmanifest`: descoberta e integração futura.
-- `.github/workflows/pages.yml`: verificação automatizada; não publica o site por conta própria.
+O site possui aulas sobre:
 
-## Segurança do playground
+- `console.log`, variáveis e tipos de dados;
+- contas, comparações e decisões com `if` e `else`;
+- repetições com `for`;
+- funções;
+- arrays e objetos;
+- JSON e dados de sensores;
+- mudanças em páginas com DOM;
+- tratamento de erros;
+- `async`, `await` e promessas;
+- ideias básicas de HTTP e APIs.
 
-Cada execução acontece em um `iframe` com `sandbox="allow-scripts"`, sem `allow-same-origin`. A aplicação recria o frame a cada execução, aceita mensagens somente da janela criada, limita a quantidade de linhas e encerra o experimento em poucos segundos. O conteúdo editado e o progresso ficam no dispositivo; não há backend, conta ou envio do código para um servidor.
+Os exemplos usam situações simples, como estoque, entregas, sensores e máquinas. Eles foram escritos para este projeto e apenas se inspiram nos temas estudados no [Curso SENAI](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND). Este site não é um material oficial do SENAI.
 
-O sandbox não é uma promessa de segurança para código arbitrário fora deste contexto. Ele é uma camada de contenção apropriada para os exemplos educativos do navegador, com CSP restritiva e sem permissões de rede, armazenamento ou acesso à página principal.
+## O que é o playground?
 
-## Rodar localmente
+O playground é a área em que você testa o código.
 
-Com Python instalado:
+1. Escolha uma aula.
+2. Leia a explicação.
+3. Altere o código no editor.
+4. Clique em **Rodar código**.
+5. Observe a saída e tente o desafio proposto.
+
+O código é executado dentro de uma área separada do site. Isso evita que o exemplo altere a página principal. O código digitado não é enviado para um servidor.
+
+## Como usar o site
+
+Para visitar o site, basta abrir o arquivo `index.html` em um servidor local ou publicar o projeto. Para testar no computador com Python instalado, execute na pasta do projeto:
 
 ```bash
-python3 -m http.server 3000 --bind 0.0.0.0
+python3 -m http.server 3000
 ```
 
-Abra `http://localhost:3000/`. Não abra o HTML como `file://`, porque o navegador pode bloquear o carregamento do catálogo JSON.
+Depois, abra [http://localhost:3000](http://localhost:3000) no navegador. É melhor usar um servidor local do que abrir o arquivo diretamente, porque as aulas são carregadas de um arquivo JSON.
 
-## Publicar no GitHub Pages
+## Arquivos principais
 
-A publicação está deliberadamente desativada. Quando quiser autorizar, abra **Settings → Pages**, escolha **Deploy from a branch**, selecione `main` e a pasta `/ (root)`, e salve. O `index.html` na raiz já está pronto para o mecanismo do Pages.
+- `index.html`: página principal do site.
+- `public/style.css`: cores, tamanhos, layout e versão para celular.
+- `public/script.js`: busca, filtros, tema, progresso e execução do código.
+- `public/data/lessons.json`: textos e exemplos das aulas.
+- `public/assets/`: favicon e banner usado nas redes sociais.
+- `robots.txt` e `sitemap.xml`: arquivos que ajudam os buscadores a encontrar o site.
+- `.github/workflows/pages.yml`: verificação automática dos arquivos do projeto.
 
-Antes de publicar em um domínio diferente, atualize `canonical`, `og:url`, `og:image`, `twitter:image` e `sitemap.xml` para o endereço real. O workflow atual apenas valida os arquivos; ele não habilita Pages nem cria uma publicação automática.
+O projeto usa apenas **HTML, CSS e JavaScript**. Não usa TypeScript, framework, banco de dados ou servidor próprio.
 
-## Contribuição
+## GitHub Pages
 
-Leia [CONTRIBUTING.md](CONTRIBUTING.md) antes de abrir uma issue ou pull request. Mudanças de conteúdo devem manter exemplos pequenos, executáveis e compreensíveis. Não adicione TypeScript, frameworks ou dependências sem uma decisão documentada.
+O projeto já possui `index.html` na raiz, que é o formato esperado pelo GitHub Pages. A publicação deve ser ativada manualmente pelo dono do repositório em **Settings → Pages**. O workflow do projeto apenas verifica os arquivos e não publica sozinho.
 
-## Licença e autoria
+## Referências visuais
 
-Projeto acadêmico e autoral de Gabriel Araújo. Consulte o repositório para a licença aplicável e os termos de uso dos conteúdos.
+A organização e a apresentação foram inspiradas por projetos do próprio autor:
+
+- [Matemática Blitz](https://github.com/gabrielaraujo-eng/matematica-blitz);
+- [Provão Paulista 2027](https://github.com/gabrielaraujo-eng/provao-paulista-2027);
+- [Laboratório Visual de HTML & CSS](https://loboratorio-html.vercel.app/).
+
+Projeto acadêmico e autoral de Gabriel Araújo.
