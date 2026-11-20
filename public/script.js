@@ -12,6 +12,7 @@
   let category = 'all';
   let completed = readJson(storage.progress, []);
   let collapsedGroups = readJson(storage.groups, {});
+  const popularTags = ['console', 'const', 'function', 'array', 'object', 'class', 'DOM', 'eventos', 'fetch', 'async', 'await', 'Promise', 'JSON', 'import', 'Node.js', 'Error'];
 
   function readJson(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -58,6 +59,24 @@
     return lessons.filter((lesson) => {
       const text = norm([lesson.title, lesson.categoryLabel, lesson.description, ...(lesson.keywords || [])].join(' '));
       return (category === 'all' || lesson.category === category) && (!query || text.includes(query));
+    });
+  }
+  function renderPopularTags() {
+    const container = $('#popular-tags-list');
+    if (!container) return;
+    container.innerHTML = '';
+    popularTags.forEach((tag) => {
+      const button = document.createElement('button');
+      button.className = 'popular-tag';
+      button.type = 'button';
+      button.textContent = tag;
+      button.addEventListener('click', () => {
+        category = 'all';
+        if (searchInput) searchInput.value = tag;
+        document.querySelectorAll('[data-category]').forEach((item) => { const selected = item.dataset.category === 'all'; item.classList.toggle('is-selected', selected); item.setAttribute('aria-pressed', String(selected)); });
+        renderList();
+      });
+      container.append(button);
     });
   }
   function renderList() {
@@ -170,6 +189,7 @@
   function setup() {
     initTheme();
     setCatalogCollapsed(readJson(storage.catalog, false));
+    renderPopularTags();
     $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
     $('#menu-toggle')?.addEventListener('click', () => {
       if (window.innerWidth > 720) { $('#catalogo')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
