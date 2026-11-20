@@ -55,7 +55,7 @@
     if (visible.length) {
       const note = document.createElement('p');
       note.className = 'list-note';
-      note.textContent = 'Mude uma linha, rode e observe. O melhor caminho é o que desperta uma pergunta.';
+      note.textContent = 'Escolha um item, mude uma linha, rode e observe.';
       lessonList.append(note);
     }
   }
@@ -134,11 +134,16 @@
   }
   function setup() {
     initTheme();
-    searchInput?.addEventListener('input', renderList);
+    searchInput?.addEventListener('input', () => {
+      renderList();
+      const visible = visibleLessons();
+      if (!visible.some((lesson) => lesson.id === activeLesson?.id) && visible[0]) selectLesson(visible[0].id);
+    });
     document.querySelectorAll('[data-category]').forEach((button) => button.addEventListener('click', () => {
       category = button.dataset.category;
       document.querySelectorAll('[data-category]').forEach((item) => { const selected = item === button; item.classList.toggle('is-selected', selected); item.setAttribute('aria-pressed', String(selected)); });
       renderList();
+      if (!visibleLessons().some((lesson) => lesson.id === activeLesson?.id) && visibleLessons()[0]) selectLesson(visibleLessons()[0].id);
     }));
     $('#run-code')?.addEventListener('click', runCode);
     $('#reset-code')?.addEventListener('click', () => { if (activeLesson) editor.value = activeLesson.starter; });
