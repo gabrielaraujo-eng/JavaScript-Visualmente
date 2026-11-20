@@ -159,6 +159,8 @@
     initTheme();
     setCatalogCollapsed(readJson(storage.catalog, false));
     $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
+    $('#catalog-launcher')?.addEventListener('click', () => { setCatalogCollapsed(false, true); $('#catalogo')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    document.querySelectorAll('a[href="#catalogo"]').forEach((link) => link.addEventListener('click', () => setCatalogCollapsed(false, true)));
     searchInput?.addEventListener('input', () => {
       renderList();
       const visible = visibleLessons();
