@@ -35,6 +35,7 @@
     layout.classList.toggle('is-sidebar-collapsed', collapsed);
     toggle.setAttribute('aria-expanded', String(!collapsed));
     toggle.setAttribute('aria-label', collapsed ? 'Expandir catálogo JavaScript' : 'Minimizar catálogo JavaScript');
+    toggle.setAttribute('title', collapsed ? 'Abrir catálogo' : 'Minimizar catálogo');
     if (persist) saveJson(storage.catalog, collapsed);
   }
   function setMobileMenuOpen(open) {
