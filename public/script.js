@@ -6,7 +6,7 @@
   const runStatus = $('#run-status');
   const completeButton = $('#complete-lesson');
   const searchInput = $('#lesson-search');
-  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1' };
+  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1', catalog: 'jsvisual.catalog-collapsed.v1' };
   let lessons = [];
   let activeLesson = null;
   let category = 'all';
@@ -23,6 +23,17 @@
     button?.setAttribute('aria-pressed', String(theme === 'light'));
     button?.setAttribute('aria-label', theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro');
     if (persist) saveJson(storage.theme, theme);
+  }
+  function setCatalogCollapsed(collapsed, persist = false) {
+    const sidebar = $('.lesson-sidebar');
+    const layout = $('.lesson-layout');
+    const toggle = $('#catalog-toggle');
+    if (!sidebar || !layout || !toggle) return;
+    sidebar.classList.toggle('is-collapsed', collapsed);
+    layout.classList.toggle('is-sidebar-collapsed', collapsed);
+    toggle.setAttribute('aria-expanded', String(!collapsed));
+    toggle.setAttribute('aria-label', collapsed ? 'Expandir catálogo JavaScript' : 'Minimizar catálogo JavaScript');
+    if (persist) saveJson(storage.catalog, collapsed);
   }
   function initTheme() {
     let saved = null;
@@ -146,6 +157,8 @@
   }
   function setup() {
     initTheme();
+    setCatalogCollapsed(readJson(storage.catalog, false));
+    $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
     searchInput?.addEventListener('input', () => {
       renderList();
       const visible = visibleLessons();
