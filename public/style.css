@@ -187,9 +187,7 @@ button { color: inherit; }
 .lab-panel { min-width: 0; padding: clamp(17px, 2.5vw, 27px); }
 .lab-topline { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; }
 .lesson-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.category-badge, .duration-badge { min-height: 24px; display: inline-flex; align-items: center; padding: 0 8px; border-radius: 7px; font-size: 9px; font-weight: 850; letter-spacing: .08em; }
-.category-badge { color: var(--violet); background: rgba(186,171,255,.11); }
-.duration-badge { color: var(--muted); background: var(--panel-raised); }
+.category-badge { min-height: 24px; display: inline-flex; align-items: center; padding: 0 8px; border-radius: 7px; color: var(--violet); background: rgba(186,171,255,.11); font-size: 9px; font-weight: 850; letter-spacing: .08em; }
 .save-lesson { min-height: 31px; display: inline-flex; align-items: center; gap: 6px; padding: 0 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: transparent; font-size: 10px; font-weight: 700; cursor: pointer; }
 .save-lesson:hover, .save-lesson[aria-pressed="true"] { border-color: rgba(144,221,179,.32); color: var(--green); background: rgba(144,221,179,.07); }
 .save-lesson span { font-size: 14px; }

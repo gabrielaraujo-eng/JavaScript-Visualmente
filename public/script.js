@@ -59,7 +59,7 @@
         const link = document.createElement('a');
         link.className = `lesson-card${activeLesson?.id === lesson.id ? ' is-active' : ''}`;
         link.href = '#laboratorio';
-        link.innerHTML = `<span class="lesson-index">${String(lessons.indexOf(lesson) + 1).padStart(2, '0')}</span><span class="lesson-card-copy"><span class="lesson-card-title">${lesson.title}</span><span class="lesson-card-meta">${lesson.keywords?.[0] || lesson.categoryLabel} · ${lesson.duration}</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>`;
+        link.innerHTML = `<span class="lesson-index">${String(lessons.indexOf(lesson) + 1).padStart(2, '0')}</span><span class="lesson-card-copy"><span class="lesson-card-title">${lesson.title}</span><span class="lesson-card-meta">${lesson.keywords?.[0] || lesson.categoryLabel}</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>`;
         link.addEventListener('click', (event) => { event.preventDefault(); selectLesson(lesson.id, true); });
         section.append(link);
       });
@@ -86,7 +86,6 @@
     if (!lesson) return;
     activeLesson = lesson;
     $('#lesson-category').textContent = lesson.categoryLabel.toUpperCase();
-    $('#lesson-duration').textContent = lesson.duration.toUpperCase();
     $('#lesson-title').textContent = lesson.title;
     $('#lesson-description').textContent = lesson.description;
     $('#lesson-explanation').textContent = lesson.explanation;
