@@ -26,5 +26,5 @@
 - [x] Criar e manter público `gabrielaraujo-eng/JavaScript-Visualmente`; rastrear blocos de trabalho em issues, desenvolver em branches, abrir PRs, validar e fazer merge.
 - [x] Documentar proposta, estrutura, execução local, segurança do playground, acessibilidade, SEO e passos para ativar Pages.
 - [x] Usar HTML, CSS e JavaScript puro; não adicionar TypeScript, framework, backend ou dependências desnecessárias.
-- [ ] Mesclar os PRs de interface, conteúdo/playground, acessibilidade/progresso e SEO/publicação preparada.
-- [ ] Rodar verificações finais e sincronizar a versão entregue ao projeto de Preview.
+- [x] Mesclar os PRs de interface, conteúdo/playground, acessibilidade/progresso e SEO/publicação preparada.
+- [x] Rodar verificações finais e sincronizar a versão entregue ao projeto de Preview.
