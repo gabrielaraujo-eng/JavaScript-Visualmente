@@ -34,9 +34,12 @@
     const sidebar = $('.lesson-sidebar');
     const layout = $('.lesson-layout');
     const toggle = $('#catalog-toggle');
+    const backdrop = $('#sidebar-backdrop');
     if (!sidebar || !layout || !toggle) return;
     sidebar.classList.toggle('is-collapsed', collapsed);
     layout.classList.toggle('is-sidebar-collapsed', collapsed);
+    document.body.classList.toggle('sidebar-open', !collapsed);
+    if (backdrop) backdrop.hidden = collapsed;
     toggle.setAttribute('aria-expanded', String(!collapsed));
     toggle.setAttribute('aria-label', collapsed ? 'Expandir catálogo JavaScript' : 'Minimizar catálogo JavaScript');
     if (persist) saveJson(storage.catalog, collapsed);
@@ -185,8 +188,9 @@
   }
   function setup() {
     initTheme();
-    setCatalogCollapsed(readJson(storage.catalog, false));
+    setCatalogCollapsed(readJson(storage.catalog, window.matchMedia?.('(max-width: 720px)').matches ?? false));
     $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
+    $('#sidebar-backdrop')?.addEventListener('click', () => setCatalogCollapsed(true, true));
     document.querySelectorAll('a[href="#catalogo"]').forEach((link) => link.addEventListener('click', () => setCatalogCollapsed(false, true)));
     searchInput?.addEventListener('input', () => {
       renderList();
