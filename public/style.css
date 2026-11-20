@@ -170,8 +170,17 @@ button { color: inherit; }
 .lesson-total { padding: 3px 8px; border-radius: 999px; color: var(--ink-soft); background: var(--panel-raised); letter-spacing: 0; }
 .catalog-toggle { width: 25px; height: 25px; display: grid; place-items: center; padding: 0 0 2px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); background: transparent; font-size: 20px; line-height: 1; cursor: pointer; transition: transform .2s ease, color .15s ease, border-color .15s ease; }
 .catalog-toggle:hover { color: var(--ink); border-color: var(--line-strong); }
+.catalog-index { display: grid; gap: 7px; padding: 14px 8px 9px; border-bottom: 1px solid var(--line); }
+.catalog-index-title { margin: 0 7px; color: var(--muted); font-size: 8px; font-weight: 850; letter-spacing: .14em; }
+.catalog-index-intro { margin: 0 7px 3px; color: var(--ink-soft); font-size: 10px; line-height: 1.45; }
+.index-card { min-height: 42px; display: grid; grid-template-columns: 25px minmax(0,1fr) auto; align-items: center; gap: 8px; padding: 7px 8px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink-soft); background: transparent; text-align: left; font-size: 10px; font-weight: 750; cursor: pointer; transition: .15s ease; }
+.index-card:hover { border-color: var(--line-strong); background: var(--panel-raised); }
+.index-card.is-active { border-color: var(--violet); color: var(--ink); background: rgba(186,171,255,.1); }
+.index-card-icon { width: 23px; height: 23px; display: grid; place-items: center; border-radius: 7px; color: var(--amber); background: rgba(255,209,93,.1); font-size: 12px; }
+.index-card b { min-width: 20px; padding: 2px 5px; border-radius: 99px; color: var(--muted); background: var(--panel-raised); font-size: 9px; text-align: center; }
 .lesson-sidebar.is-collapsed { max-height: 53px; }
 .lesson-sidebar.is-collapsed .lesson-list { display: none; }
+.lesson-sidebar.is-collapsed .catalog-index { display: none; }
 .lesson-sidebar.is-collapsed .lesson-total { display: none; }
 .lesson-sidebar.is-collapsed .sidebar-heading { justify-content: center; padding-inline: 8px; }
 .lesson-sidebar.is-collapsed .sidebar-heading > span:first-child { display: none; }
