@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10131d">
+  <meta name="description" content="Aprenda JavaScript na prática: explore exemplos, edite o código e veja o resultado em um laboratório interativo e gratuito.">
+  <meta name="author" content="Gabriel Araújo">
+  <title>JavaScript Visualmente — aprenda na prática</title>
+  <link rel="icon" type="image/svg+xml" href="public/assets/favicon.svg">
+  <link rel="stylesheet" href="public/style.css">
+  <script src="public/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="JavaScript Visualmente, início">
+        <span class="brand-mark" aria-hidden="true"><span>JS</span><i></i></span>
+        <span class="brand-name">javascript<span>visualmente</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Navegação principal">
+        <a href="#catalogo">Explorar aulas</a>
+        <a href="#laboratorio">Laboratório</a>
+      </nav>
+      <button class="theme-toggle icon-button" id="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <span class="sr-only">Tema claro ou escuro</span>
+      </button>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> UM LABORATÓRIO PARA QUEM ESTÁ COMEÇANDO</p>
+          <h1 id="hero-title">JavaScript fica claro quando você <em>experimenta.</em></h1>
+          <p class="hero-description">Leia uma ideia, mexa no código e rode o exemplo. Sem instalação, sem pressão — só você e a próxima descoberta.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#laboratorio">Abrir o laboratório <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#catalogo">Ver trilhas <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof"><span class="proof-icon" aria-hidden="true">{ }</span><span>Gratuito, no navegador e no seu ritmo</span></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustração de código JavaScript e saída de um programa">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
+          <div class="art-window">
+            <div class="art-window-bar"><span></span><span></span><span></span><b>experimento.js</b></div>
+            <div class="art-code"><span class="code-line"><i>01</i><code><b>const</b> ideia = <strong>"testar"</strong>;</code></span><span class="code-line"><i>02</i><code><b>console</b>.log(ideia);</code></span><span class="code-line"><i>03</i><code class="cursor-line">▌</code></span></div>
+            <div class="art-output"><span class="output-pulse"></span><span>testar</span><small>saída</small></div>
+          </div>
+          <div class="art-js">JS<span>24</span></div>
+          <div class="art-sticker">mude<br>e rode <b>↗</b></div>
+        </div>
+      </section>
+
+      <section class="progress-strip" aria-label="Seu progresso de aprendizagem">
+        <div class="progress-copy"><span class="progress-icon" aria-hidden="true">✳</span><div><strong>Seu espaço de descoberta</strong><span id="progress-label">Comece por qualquer aula. Seu progresso fica só neste navegador.</span></div></div>
+        <div class="progress-meter"><div class="progress-numbers"><span id="progress-count">0 aulas vistas</span><span id="progress-percent">0%</span></div><div class="progress-track" role="progressbar" aria-label="Aulas concluídas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div></div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="section-heading"><div><p class="eyebrow">ESCOLHA O PRÓXIMO PASSO</p><h2 id="catalog-title">Uma ideia de cada vez.</h2></div><p>Comece pelo começo ou siga a sua curiosidade. Cada aula é um pequeno convite para testar.</p></div>
+        <div class="catalog-tools">
+          <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.5 4.5"/></svg><span class="sr-only">Buscar aulas</span><input id="lesson-search" type="search" placeholder="Buscar uma ideia, palavra ou tema…" autocomplete="off"></label>
+          <div class="filter-row" id="category-filters" role="group" aria-label="Filtrar por categoria">
+            <button class="filter-chip is-selected" type="button" data-category="all" aria-pressed="true">Tudo</button>
+            <button class="filter-chip" type="button" data-category="fundamentos" aria-pressed="false">Fundamentos</button>
+            <button class="filter-chip" type="button" data-category="logica" aria-pressed="false">Lógica</button>
+            <button class="filter-chip" type="button" data-category="dados" aria-pressed="false">Dados</button>
+            <button class="filter-chip" type="button" data-category="web" aria-pressed="false">Web</button>
+            <button class="filter-chip" type="button" data-category="backend" aria-pressed="false">Conexões com backend</button>
+          </div>
+        </div>
+        <div class="lesson-layout">
+          <aside class="lesson-sidebar" aria-label="Aulas disponíveis">
+            <div class="sidebar-heading"><span>TRILHAS DE APRENDIZAGEM</span><span class="lesson-total" id="lesson-total">—</span></div>
+            <div id="lesson-list" class="lesson-list">
+              <a class="lesson-card is-active" href="#laboratorio" data-lesson="primeiro-log">
+                <span class="lesson-index">01</span><span class="lesson-card-copy"><span class="lesson-card-title">Seu primeiro log</span><span class="lesson-card-meta">Fundamentos · 3 min</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="lesson-card" href="#laboratorio" data-lesson="variaveis">
+                <span class="lesson-index">02</span><span class="lesson-card-copy"><span class="lesson-card-title">Guardar uma informação</span><span class="lesson-card-meta">Fundamentos · 4 min</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>
+              </a>
+              <p class="list-note">Mais experimentos estão a caminho. Escolha uma ideia para começar.</p>
+            </div>
+          </aside>
+
+          <article class="lab-panel" id="laboratorio" aria-labelledby="lesson-title">
+            <div class="lab-topline"><div class="lesson-badges"><span class="category-badge" id="lesson-category">FUNDAMENTOS</span><span class="duration-badge" id="lesson-duration">3 MIN</span></div><button class="save-lesson" id="complete-lesson" type="button" aria-pressed="false"><span aria-hidden="true">○</span> Marcar como vista</button></div>
+            <div class="lesson-intro"><h2 id="lesson-title">Seu primeiro log</h2><p id="lesson-description">Vamos pedir ao JavaScript que mostre uma mensagem. O console é um lugar simples para observar o que o seu programa está fazendo.</p></div>
+            <div class="explain-note"><span class="note-mark" aria-hidden="true">i</span><p id="lesson-explanation">`console.log()` recebe um valor e escreve esse valor na saída do programa. É uma das ferramentas mais úteis para experimentar e entender o que o código faz.</p></div>
+            <div class="editor-header"><div class="editor-label"><span class="editor-dot"></span><span>SEU CÓDIGO</span><span class="file-label">experimento.js</span></div><button class="reset-code" id="reset-code" type="button">Restaurar exemplo</button></div>
+            <label class="sr-only" for="code-editor">Edite seu código JavaScript</label>
+            <textarea id="code-editor" class="code-editor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-describedby="editor-help">console.log("Olá, JavaScript!");</textarea>
+            <div class="editor-footer"><span id="editor-help">Experimente trocar a mensagem entre aspas.</span><button class="button button-run" id="run-code" type="button"><span aria-hidden="true">▶</span> Rodar código</button></div>
+            <div class="console-panel" aria-live="polite" aria-atomic="false"><div class="console-title"><span>SAÍDA</span><span id="run-status">PRONTO PARA RODAR</span></div><pre id="console-output">Seu resultado aparece aqui.</pre></div>
+            <div class="next-challenge"><span class="challenge-icon" aria-hidden="true">✳</span><div><strong>Agora é com você</strong><p id="lesson-challenge">Troque a mensagem e rode de novo. O que muda na saída?</p></div></div>
+          </article>
+        </div>
+        <p class="empty-search" id="empty-search" hidden>Nenhuma aula encontrada. Tente outra palavra ou categoria.</p>
+      </section>
+
+      <section class="path-note" aria-labelledby="path-note-title"><div class="path-note-symbol" aria-hidden="true">{ }</div><div><p class="eyebrow">DO CÓDIGO AO MUNDO REAL</p><h2 id="path-note-title">Ideias que se conectam.</h2><p>Além dos fundamentos, você vai experimentar listas de sensores, funções para calcular uma entrega, dados em JSON e conceitos por trás de APIs. São exemplos próprios, inspirados nos temas de backend estudados no <a href="https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND" target="_blank" rel="noreferrer">repositório do curso</a>.</p></div><div class="path-note-aside"><span>PASSO A PASSO</span><b>do primeiro log<br>à primeira API</b><i aria-hidden="true">↗</i></div></section>
+    </main>
+
+    <footer class="footer"><a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"><span>JS</span><i></i></span><span class="brand-name">javascript<span>visualmente</span></span></a><p>Feito para aprender mexendo. O código que você roda não sai deste navegador.</p><a href="#conteudo" class="back-top">Voltar ao topo ↑</a></footer>
+  </div>
+</body>
+</html>
