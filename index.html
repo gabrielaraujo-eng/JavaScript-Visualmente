@@ -26,12 +26,13 @@
   <title>JavaScript Visualmente — aprenda na prática</title>
   <link rel="icon" type="image/svg+xml" href="public/assets/favicon.svg">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="public/style.css?v=20261120-collapsible-topics">
+  <link rel="stylesheet" href="public/style.css?v=20261120-mobile-menu">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"JavaScript Visualmente","description":"Laboratório interativo em português para aprender JavaScript praticando.","url":"https://gabrielaraujo-eng.github.io/JavaScript-Visualmente/","inLanguage":"pt-BR","learningResourceType":"interactive tutorial","educationalLevel":"beginner","isAccessibleForFree":true,"author":{"@type":"Person","name":"Gabriel Araújo"},"about":["JavaScript","programação","desenvolvimento web","backend"]}</script>
-  <script src="public/script.js?v=20261120-collapsible-topics" defer></script>
+  <script src="public/script.js?v=20261120-mobile-menu" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <button class="mobile-menu-backdrop" id="mobile-menu-backdrop" type="button" aria-label="Fechar menu de recursos" hidden></button>
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="./" aria-label="JavaScript Visualmente, início">
@@ -43,9 +44,10 @@
         <a href="#laboratorio">Laboratório</a>
       </nav>
       <button class="theme-toggle icon-button" id="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
-        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3-1.42-1.42"/></svg>
         <span class="sr-only">Tema claro ou escuro</span>
       </button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu de recursos JavaScript" aria-expanded="false"><span aria-hidden="true">☰</span><b>Recursos</b></button>
     </header>
 
     <main id="conteudo">
