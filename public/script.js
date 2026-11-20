@@ -95,7 +95,7 @@
       section.className = `lesson-group${isCollapsed ? ' is-collapsed' : ''}`;
       const heading = document.createElement('div');
       heading.className = 'lesson-group-heading';
-      heading.innerHTML = `<button class="lesson-group-toggle" type="button" aria-expanded="${String(!isCollapsed)}"><span>${groupLabels[group]}</span><b>${groupLessons.length}</b><span class="group-chevron" aria-hidden="true">⌄</span></button>`;
+      heading.innerHTML = `<button class="lesson-group-toggle" type="button" aria-expanded="${String(!isCollapsed)}" aria-label="${isCollapsed ? 'Expandir' : 'Recolher'} ${groupLabels[group]}"><span>${groupLabels[group]}</span><b>${groupLessons.length}</b><span class="group-chevron" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></button>`;
       heading.querySelector('.lesson-group-toggle').addEventListener('click', () => { collapsedGroups[group] = !collapsedGroups[group]; saveJson(storage.groups, collapsedGroups); renderList(); });
       section.append(heading);
       groupLessons.forEach((lesson) => {
