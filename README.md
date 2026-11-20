@@ -69,7 +69,7 @@ O projeto usa apenas **HTML, CSS e JavaScript**. Não usa TypeScript, framework,
 
 ## Compartilhamento e SEO
 
-O site possui título, descrição, canonical, dados estruturados `LearningResource`, Open Graph e Twitter Card em `index.html`. O banner de compartilhamento atualizado está em `public/assets/javascript-visualmente-og-v2.png`. `robots.txt` aponta para o `sitemap.xml`, e o manifesto mantém os dados necessários para a opção **Instalar app** do GitHub Pages.
+O site possui título, descrição, canonical, dados estruturados `LearningResource`, Open Graph e Twitter Card em `index.html`. A arte fonte do banner está em `public/assets/javascript-visualmente-og-v2.png`, e a versão JPEG leve usada nas miniaturas de compartilhamento está em `public/assets/javascript-visualmente-og-v2.jpg`. `robots.txt` aponta para o `sitemap.xml`, e o manifesto mantém os dados necessários para a opção **Instalar app** do GitHub Pages.
 
 ## GitHub Pages
 
