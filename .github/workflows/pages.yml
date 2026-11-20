@@ -1,0 +1,33 @@
+name: Verificar site estático
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+      - name: Verificar arquivos essenciais
+        run: |
+          test -f index.html
+          test -f public/data/lessons.json
+          test -f public/script.js
+          test -f public/style.css
+          test -f robots.txt
+          test -f sitemap.xml
+          python3 -m json.tool public/data/lessons.json >/dev/null
+          python3 -m json.tool public/manus-routes.json >/dev/null
+          ! grep -RIl --exclude-dir=.git -E '\.(ts|tsx)$' .
+      - name: Verificar referências locais
+        run: |
+          grep -q 'public/style.css' index.html
+          grep -q 'public/script.js' index.html
+          grep -q 'public/data/lessons.json' public/script.js
