@@ -11,6 +11,12 @@
   let activeLesson = null;
   let category = 'all';
   let completed = readJson(storage.progress, []);
+  const categoryInfo = {
+    all: { label: 'Todos os recursos', icon: '✦' },
+    essencial: { label: 'JavaScript essencial', icon: '⚡' },
+    navegador: { label: 'JavaScript no navegador', icon: '◉' },
+    backend: { label: 'JavaScript para backend', icon: '▣' }
+  };
 
   function readJson(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -50,10 +56,32 @@
       return (category === 'all' || lesson.category === category) && (!query || text.includes(query));
     });
   }
+  function renderCatalogIndex() {
+    const index = $('#catalog-index');
+    if (!index) return;
+    index.innerHTML = `<p class="catalog-index-title">ÍNDICE COMPLETO</p><p class="catalog-index-intro">Vá direto para o tema que você quer estudar:</p>`;
+    Object.entries(categoryInfo).forEach(([value, info]) => {
+      const count = value === 'all' ? lessons.length : lessons.filter((lesson) => lesson.category === value).length;
+      const button = document.createElement('button');
+      button.className = `index-card${category === value ? ' is-active' : ''}`;
+      button.type = 'button';
+      button.setAttribute('aria-pressed', String(category === value));
+      button.innerHTML = `<span class="index-card-icon" aria-hidden="true">${info.icon}</span><span>${info.label}</span><b>${count}</b>`;
+      button.addEventListener('click', () => {
+        category = value;
+        document.querySelectorAll('[data-category]').forEach((item) => { const selected = item.dataset.category === value; item.classList.toggle('is-selected', selected); item.setAttribute('aria-pressed', String(selected)); });
+        renderList();
+        const first = visibleLessons()[0];
+        if (first && !visibleLessons().some((lesson) => lesson.id === activeLesson?.id)) selectLesson(first.id);
+      });
+      index.append(button);
+    });
+  }
   function renderList() {
     const visible = visibleLessons();
     $('#lesson-total').textContent = `${visible.length}/${lessons.length}`;
     $('#empty-search').hidden = Boolean(visible.length);
+    renderCatalogIndex();
     lessonList.innerHTML = '';
     const groupLabels = { essencial: 'JavaScript essencial', navegador: 'No navegador', backend: 'Para backend' };
     const groupOrder = ['essencial', 'navegador', 'backend'];
