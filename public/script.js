@@ -44,13 +44,26 @@
     $('#lesson-total').textContent = `${visible.length}/${lessons.length}`;
     $('#empty-search').hidden = Boolean(visible.length);
     lessonList.innerHTML = '';
-    visible.forEach((lesson) => {
-      const link = document.createElement('a');
-      link.className = `lesson-card${activeLesson?.id === lesson.id ? ' is-active' : ''}`;
-      link.href = '#laboratorio';
-      link.innerHTML = `<span class="lesson-index">${String(lessons.indexOf(lesson) + 1).padStart(2, '0')}</span><span class="lesson-card-copy"><span class="lesson-card-title">${lesson.title}</span><span class="lesson-card-meta">${lesson.categoryLabel} · ${lesson.duration}</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>`;
-      link.addEventListener('click', (event) => { event.preventDefault(); selectLesson(lesson.id, true); });
-      lessonList.append(link);
+    const groupLabels = { essencial: 'JavaScript essencial', navegador: 'No navegador', backend: 'Para backend' };
+    const groupOrder = ['essencial', 'navegador', 'backend'];
+    groupOrder.forEach((group) => {
+      const groupLessons = visible.filter((lesson) => lesson.category === group);
+      if (!groupLessons.length) return;
+      const section = document.createElement('section');
+      section.className = 'lesson-group';
+      const heading = document.createElement('div');
+      heading.className = 'lesson-group-heading';
+      heading.innerHTML = `<span>${groupLabels[group]}</span><b>${groupLessons.length}</b>`;
+      section.append(heading);
+      groupLessons.forEach((lesson) => {
+        const link = document.createElement('a');
+        link.className = `lesson-card${activeLesson?.id === lesson.id ? ' is-active' : ''}`;
+        link.href = '#laboratorio';
+        link.innerHTML = `<span class="lesson-index">${String(lessons.indexOf(lesson) + 1).padStart(2, '0')}</span><span class="lesson-card-copy"><span class="lesson-card-title">${lesson.title}</span><span class="lesson-card-meta">${lesson.keywords?.[0] || lesson.categoryLabel} · ${lesson.duration}</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>`;
+        link.addEventListener('click', (event) => { event.preventDefault(); selectLesson(lesson.id, true); });
+        section.append(link);
+      });
+      lessonList.append(section);
     });
     if (visible.length) {
       const note = document.createElement('p');
