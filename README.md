@@ -23,7 +23,7 @@ O site possui aulas sobre:
 - `async`, `await` e promessas;
 - ideias básicas de HTTP e APIs.
 
-Os exemplos usam situações simples, como estoque, entregas, rotas, formulários e dados do navegador. Eles foram escritos para este projeto e apenas se inspiram nos temas estudados no [Curso SENAI](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND). Este site não é um material oficial do SENAI.
+Os exemplos usam situações simples, como estoque, entregas, rotas, formulários e dados do navegador. A referência de dados e dos exemplos de backend é o diretório [Curso_senai/2_termo/BACKEND](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND), que reúne atividades de JavaScript e Node.js, módulos, JSON, leitura e gravação de arquivos, dependências, manutenção, estoque, produção, logística e orientação a objetos. O JavaScript Visualmente apenas consulta essa referência; o repositório do Curso SENAI não é alterado por este projeto e o site não é um material oficial do SENAI.
 
 Além da trilha guiada, o site mantém um catálogo de referência com 50 experimentos organizados em três grupos recolhíveis: JavaScript essencial, JavaScript no navegador e JavaScript para backend. Cada item combina uma explicação curta, código editável e um desafio para continuar testando.
 
