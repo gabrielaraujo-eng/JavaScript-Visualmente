@@ -28,11 +28,10 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="public/style.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"JavaScript Visualmente","description":"Laboratório interativo em português para aprender JavaScript praticando.","url":"https://gabrielaraujo-eng.github.io/JavaScript-Visualmente/","inLanguage":"pt-BR","learningResourceType":"interactive tutorial","educationalLevel":"beginner","isAccessibleForFree":true,"author":{"@type":"Person","name":"Gabriel Araújo"},"about":["JavaScript","programação","desenvolvimento web","backend"]}</script>
-  <script src="public/script.js?v=20261120-fixed-drawer-2" defer></script>
+  <script src="public/script.js?v=20261120-collapsible-topics" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Fechar menu lateral" hidden></button>
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="./" aria-label="JavaScript Visualmente, início">
@@ -98,8 +97,7 @@
         </div>
         <div class="lesson-layout">
           <aside class="lesson-sidebar" aria-label="Menu de recursos JavaScript">
-            <div class="sidebar-heading"><span>RECURSOS JAVASCRIPT</span><span class="sidebar-heading-actions"><span class="lesson-total" id="lesson-total">—</span><button class="catalog-toggle" id="catalog-toggle" type="button" aria-expanded="true" aria-controls="catalog-index lesson-list" aria-label="Minimizar catálogo JavaScript">‹</button></span></div>
-            <div class="catalog-index" id="catalog-index" aria-label="Índice de categorias JavaScript"></div>
+            <div class="sidebar-heading"><span>RECURSOS JAVASCRIPT</span><span class="sidebar-heading-actions"><span class="lesson-total" id="lesson-total">—</span><button class="catalog-toggle" id="catalog-toggle" type="button" aria-expanded="true" aria-controls="lesson-list" aria-label="Minimizar catálogo JavaScript">‹</button></span></div>
             <div id="lesson-list" class="lesson-list">
               <a class="lesson-card is-active" href="#laboratorio" data-lesson="primeiro-log">
                 <span class="lesson-index">01</span><span class="lesson-card-copy"><span class="lesson-card-title">Seu primeiro log</span><span class="lesson-card-meta">console</span></span><span class="lesson-arrow" aria-hidden="true">↗</span>
