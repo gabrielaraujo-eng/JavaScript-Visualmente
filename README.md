@@ -45,8 +45,7 @@ Você pode usar o site diretamente pelo navegador:
 - [Baixar o projeto completo em formato ZIP](https://github.com/gabrielaraujo-eng/JavaScript-Visualmente/archive/refs/heads/main.zip).
 
 O arquivo ZIP contém o site completo. Depois de baixar, extraia a pasta e abra o `index.html`. Para usar todas as aulas corretamente, prefira o link do GitHub Pages, porque ele já abre o projeto em um endereço web.
-
-No celular, também é possível usar o menu do navegador para adicionar o site à tela inicial, quando essa opção estiver disponível.
+Ao abrir o site pelo GitHub Pages, o navegador pode oferecer a opção **Instalar app**. Use essa opção para adicionar o JavaScript Visualmente como aplicativo ao computador ou celular. Dependendo do navegador e do dispositivo, ela também pode aparecer como **Adicionar à tela inicial** no menu do navegador.
 
 ## Arquivos principais
 
@@ -73,3 +72,7 @@ A organização e a apresentação foram inspiradas por projetos do próprio aut
 - [Laboratório Visual de HTML & CSS](https://loboratorio-html.vercel.app/).
 
 Projeto acadêmico e autoral de Gabriel Araújo.
+
+## Outros projetos
+
+Veja outros projetos do autor no [perfil de Gabriel Araújo no GitHub](https://github.com/gabrielaraujo-eng).
