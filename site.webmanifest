@@ -1,0 +1,11 @@
+{
+  "name": "JavaScript Visualmente",
+  "short_name": "JS Visualmente",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#10131d",
+  "background_color": "#10131d",
+  "description": "Laboratório interativo em português para aprender JavaScript praticando.",
+  "icons": [{"src":"public/assets/favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}
