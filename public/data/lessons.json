@@ -2,10 +2,15 @@
   {
     "id": "primeiro-log",
     "title": "Seu primeiro log",
-    "category": "fundamentos",
-    "categoryLabel": "Fundamentos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "3 min",
-    "keywords": ["console", "log", "saída", "primeiro programa"],
+    "keywords": [
+      "console",
+      "log",
+      "saída",
+      "primeiro programa"
+    ],
     "description": "Vamos pedir ao JavaScript que mostre uma mensagem. O console é um lugar simples para observar o que o seu programa está fazendo.",
     "explanation": "console.log() recebe um valor e escreve esse valor na saída do programa. É uma das ferramentas mais úteis para experimentar e entender o que o código faz.",
     "starter": "console.log(\"Olá, JavaScript!\");",
@@ -15,10 +20,16 @@
   {
     "id": "variaveis",
     "title": "Guardar uma informação",
-    "category": "fundamentos",
-    "categoryLabel": "Fundamentos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "4 min",
-    "keywords": ["const", "let", "variável", "texto", "número"],
+    "keywords": [
+      "const",
+      "let",
+      "variável",
+      "texto",
+      "número"
+    ],
     "description": "Variáveis dão nomes aos valores que o programa precisa lembrar. Aqui, uma etiqueta ajuda a acompanhar um pacote.",
     "explanation": "Use const quando a referência não precisa mudar e let quando ela será atualizada. O nome deve explicar o dado guardado.",
     "starter": "const pacote = \"JS-042\";\nlet tentativas = 1;\n\nconsole.log(pacote);\nconsole.log(\"Tentativas:\", tentativas);",
@@ -28,10 +39,16 @@
   {
     "id": "tipos",
     "title": "Texto, número e booleano",
-    "category": "dados",
-    "categoryLabel": "Dados",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "5 min",
-    "keywords": ["string", "number", "boolean", "typeof", "tipos"],
+    "keywords": [
+      "string",
+      "number",
+      "boolean",
+      "typeof",
+      "tipos"
+    ],
     "description": "Os valores têm tipos diferentes. Reconhecê-los evita confusões quando os dados começam a circular pelo sistema.",
     "explanation": "String representa texto, number representa números e boolean representa verdadeiro ou falso. typeof ajuda a investigar um valor.",
     "starter": "const produto = \"sensor\";\nconst quantidade = 8;\nconst disponivel = true;\n\nconsole.log(typeof produto);\nconsole.log(typeof quantidade);\nconsole.log(typeof disponivel);",
@@ -41,10 +58,16 @@
   {
     "id": "operadores",
     "title": "Fazer uma conta útil",
-    "category": "logica",
-    "categoryLabel": "Lógica",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "5 min",
-    "keywords": ["operadores", "soma", "multiplicação", "cálculo", "frete"],
+    "keywords": [
+      "operadores",
+      "soma",
+      "multiplicação",
+      "cálculo",
+      "frete"
+    ],
     "description": "Operadores transformam números em decisões e resultados. Vamos calcular um valor simples de entrega.",
     "explanation": "A expressão é avaliada antes de ser enviada ao console. Parênteses tornam a intenção mais fácil de ler e ajudam a evitar ambiguidades.",
     "starter": "const distanciaKm = 18;\nconst valorPorKm = 1.4;\nconst taxaBase = 7;\nconst frete = taxaBase + distanciaKm * valorPorKm;\n\nconsole.log(`Frete estimado: R$ ${frete.toFixed(2)}`);",
@@ -54,10 +77,16 @@
   {
     "id": "condicionais",
     "title": "Escolher um caminho",
-    "category": "logica",
-    "categoryLabel": "Lógica",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "5 min",
-    "keywords": ["if", "else", "condição", "decisão", "comparação"],
+    "keywords": [
+      "if",
+      "else",
+      "condição",
+      "decisão",
+      "comparação"
+    ],
     "description": "Programas tomam decisões comparando valores. O estoque de um item pode determinar se a venda continua.",
     "explanation": "if executa um bloco quando a condição é verdadeira. else oferece uma alternativa quando ela não é satisfeita.",
     "starter": "const estoque = 3;\nconst minimo = 5;\n\nif (estoque < minimo) {\n  console.log(\"Repor este item.\");\n} else {\n  console.log(\"Estoque suficiente.\");\n}",
@@ -67,10 +96,16 @@
   {
     "id": "lacos",
     "title": "Repetir sem copiar",
-    "category": "logica",
-    "categoryLabel": "Lógica",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "6 min",
-    "keywords": ["for", "loop", "laço", "repetição", "contador"],
+    "keywords": [
+      "for",
+      "loop",
+      "laço",
+      "repetição",
+      "contador"
+    ],
     "description": "Laços repetem uma tarefa com uma regra clara. Aqui, percorremos posições de uma pequena fila.",
     "explanation": "for combina início, condição e atualização do contador. Cada volta executa o bloco uma vez, sem precisar duplicar linhas.",
     "starter": "const fila = [\"Ana\", \"Bia\", \"Caio\"];\n\nfor (let posicao = 0; posicao < fila.length; posicao++) {\n  console.log(`${posicao + 1}. ${fila[posicao]}`);\n}",
@@ -80,10 +115,16 @@
   {
     "id": "funcoes",
     "title": "Dar nome a uma tarefa",
-    "category": "fundamentos",
-    "categoryLabel": "Fundamentos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "6 min",
-    "keywords": ["function", "parâmetro", "return", "função", "reutilizar"],
+    "keywords": [
+      "function",
+      "parâmetro",
+      "return",
+      "função",
+      "reutilizar"
+    ],
     "description": "Funções agrupam uma tarefa e podem ser chamadas sempre que ela for necessária. Isso reduz repetição e torna a intenção visível.",
     "explanation": "Parâmetros entram na função; return devolve um resultado para quem chamou. Uma função pequena é mais fácil de testar e combinar.",
     "starter": "function calcularMedia(primeira, segunda) {\n  return (primeira + segunda) / 2;\n}\n\nconst media = calcularMedia(8, 10);\nconsole.log(`Média: ${media}`);",
@@ -93,10 +134,16 @@
   {
     "id": "arrays",
     "title": "Organizar uma lista",
-    "category": "dados",
-    "categoryLabel": "Dados",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "6 min",
-    "keywords": ["array", "map", "filter", "lista", "dados"],
+    "keywords": [
+      "array",
+      "map",
+      "filter",
+      "lista",
+      "dados"
+    ],
     "description": "Arrays guardam uma coleção de valores. Métodos como map e filter ajudam a transformar a lista sem perder a clareza.",
     "explanation": "filter mantém apenas itens que passam em uma regra. map cria uma nova lista a partir de cada item original.",
     "starter": "const leituras = [21, 25, 19, 28];\nconst altas = leituras.filter((valor) => valor >= 24);\nconst comUnidade = altas.map((valor) => `${valor} °C`);\n\nconsole.log(comUnidade);",
@@ -106,10 +153,16 @@
   {
     "id": "objetos-json",
     "title": "Descrever um objeto",
-    "category": "backend",
-    "categoryLabel": "Conexões com backend",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "7 min",
-    "keywords": ["object", "JSON", "propriedade", "sensor", "dados"],
+    "keywords": [
+      "object",
+      "JSON",
+      "propriedade",
+      "sensor",
+      "dados"
+    ],
     "description": "Objetos juntam propriedades relacionadas. Esse formato aparece o tempo todo em mensagens JSON e respostas de APIs.",
     "explanation": "Uma propriedade tem chave e valor. A notação com ponto é uma forma direta de acessar um dado conhecido.",
     "starter": "const sensor = {\n  id: \"TMP-07\",\n  local: \"estufa\",\n  temperatura: 26.4,\n  ativo: true\n};\n\nconsole.log(`${sensor.id} em ${sensor.local}`);\nconsole.log(JSON.stringify(sensor, null, 2));",
@@ -119,10 +172,16 @@
   {
     "id": "dom-evento",
     "title": "Mudar uma página",
-    "category": "web",
-    "categoryLabel": "Web",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
     "duration": "7 min",
-    "keywords": ["DOM", "document", "elemento", "web", "página"],
+    "keywords": [
+      "DOM",
+      "document",
+      "elemento",
+      "web",
+      "página"
+    ],
     "description": "No navegador, o DOM representa a página como objetos. O exemplo cria um cartão e registra o que foi alterado.",
     "explanation": "document e seus métodos permitem encontrar e criar elementos. No laboratório, a página do exemplo vive dentro do iframe isolado.",
     "starter": "const titulo = document.createElement(\"h3\");\ntitulo.textContent = \"Painel atualizado\";\ndocument.body.append(titulo);\n\nconsole.log(\"Um elemento foi criado no DOM.\");",
@@ -132,10 +191,16 @@
   {
     "id": "erros",
     "title": "Ler um erro como pista",
-    "category": "fundamentos",
-    "categoryLabel": "Fundamentos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
     "duration": "6 min",
-    "keywords": ["try", "catch", "erro", "debug", "exceção"],
+    "keywords": [
+      "try",
+      "catch",
+      "erro",
+      "debug",
+      "exceção"
+    ],
     "description": "Erros não são o fim do experimento. try e catch permitem tratar uma situação inesperada com uma mensagem compreensível.",
     "explanation": "O bloco try tenta executar uma operação. Se ela falhar, catch recebe o erro e pode explicar o próximo passo.",
     "starter": "try {\n  const texto = \"{\\\"rota\\\":\\\"A1\\\"}\";\n  const pedido = JSON.parse(texto);\n  console.log(\"Rota recebida:\", pedido.rota);\n} catch (erro) {\n  console.error(\"Não foi possível ler o pedido.\");\n}",
@@ -146,9 +211,15 @@
     "id": "modulos-ideia",
     "title": "Separar responsabilidades",
     "category": "backend",
-    "categoryLabel": "Conexões com backend",
+    "categoryLabel": "Backend",
     "duration": "6 min",
-    "keywords": ["módulo", "responsabilidade", "organização", "export", "import"],
+    "keywords": [
+      "módulo",
+      "responsabilidade",
+      "organização",
+      "export",
+      "import"
+    ],
     "description": "Projetos crescem quando cada parte tem uma responsabilidade. Este mapa mental mostra como separar uma regra de cálculo.",
     "explanation": "Em Node.js, módulos ajudam a dividir arquivos. No playground, simulamos a ideia com uma função que representa uma peça reutilizável.",
     "starter": "const regraDeFrete = {\n  calcular(distancia, taxa) {\n    return 5 + distancia * taxa;\n  }\n};\n\nconst total = regraDeFrete.calcular(12, 1.2);\nconsole.log(`Total calculado: R$ ${total.toFixed(2)}`);",
@@ -159,9 +230,15 @@
     "id": "async-promessa",
     "title": "Esperar uma resposta",
     "category": "backend",
-    "categoryLabel": "Conexões com backend",
+    "categoryLabel": "Backend",
     "duration": "7 min",
-    "keywords": ["async", "await", "promise", "promessa", "tempo"],
+    "keywords": [
+      "async",
+      "await",
+      "promise",
+      "promessa",
+      "tempo"
+    ],
     "description": "Operações assíncronas representam algo que termina depois. Uma Promise pode simular a chegada de um dado sem travar o programa.",
     "explanation": "async marca uma função que trabalha com promessas. await pausa aquela função até o resultado chegar, deixando o fluxo mais legível.",
     "starter": "function buscarStatus() {\n  return new Promise((resolve) => {\n    setTimeout(() => resolve(\"separado para envio\"), 300);\n  });\n}\n\nasync function acompanhar() {\n  console.log(\"Consultando...\");\n  const status = await buscarStatus();\n  console.log(\"Status:\", status);\n}\n\nacompanhar();",
@@ -172,13 +249,659 @@
     "id": "http-api",
     "title": "Pensar em uma API",
     "category": "backend",
-    "categoryLabel": "Conexões com backend",
+    "categoryLabel": "Backend",
     "duration": "8 min",
-    "keywords": ["HTTP", "API", "rota", "request", "JSON", "backend"],
+    "keywords": [
+      "HTTP",
+      "API",
+      "rota",
+      "request",
+      "JSON",
+      "backend"
+    ],
     "description": "Uma API recebe uma solicitação e devolve dados. Aqui modelamos a ideia com uma tabela de rotas, sem fazer uma chamada externa.",
     "explanation": "Método e rota descrevem a intenção da requisição. Uma resposta JSON precisa ser previsível para quem consome o serviço.",
     "starter": "const rotas = {\n  \"GET /sensores\": { status: 200, dados: 3 },\n  \"GET /sensores/ativos\": { status: 200, dados: 2 },\n  \"POST /sensores\": { status: 201, dados: 1 }\n};\n\nconst requisicao = \"GET /sensores/ativos\";\nconsole.log(JSON.stringify({\n  rota: requisicao,\n  resposta: rotas[requisicao]\n}, null, 2));",
     "help": "Troque a rota consultada por outra chave do objeto.",
     "challenge": "Adicione uma rota para listar máquinas em manutenção."
+  },
+  {
+    "id": "template-strings",
+    "title": "Montar textos com template strings",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "4 min",
+    "keywords": [
+      "template literal",
+      "string",
+      "interpolação"
+    ],
+    "description": "Template strings misturam texto e valores sem juntar várias partes manualmente.",
+    "explanation": "Use crases e ${expressão} para criar mensagens que acompanham os dados.",
+    "starter": "const pedido = \"JS-042\";\nconst status = \"em separação\";\n\nconsole.log(`Pedido ${pedido}: ${status}.`);",
+    "help": "Troque o pedido ou o status.",
+    "challenge": "Inclua o nome de uma pessoa na mensagem."
+  },
+  {
+    "id": "desestruturacao",
+    "title": "Extrair partes de dados",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "destructuring",
+      "desestruturação",
+      "objeto",
+      "array"
+    ],
+    "description": "A desestruturação pega valores de arrays e objetos usando nomes claros.",
+    "explanation": "Ela reduz acessos repetidos e deixa explícito quais dados uma função usa.",
+    "starter": "const sensor = { local: \"estufa\", temperatura: 26.4 };\nconst { local, temperatura } = sensor;\n\nconsole.log(local, temperatura);",
+    "help": "Troque as propriedades do sensor.",
+    "challenge": "Desestruture também uma lista com duas leituras."
+  },
+  {
+    "id": "spread-rest",
+    "title": "Copiar e reunir valores",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "spread",
+      "rest",
+      "...",
+      "array",
+      "objeto"
+    ],
+    "description": "Os três pontos podem espalhar valores ou reunir argumentos em uma lista.",
+    "explanation": "O contexto define o papel: spread expande; rest agrupa o que sobrou.",
+    "starter": "const base = [\"A\", \"B\"];\nconst fila = [...base, \"C\"];\n\nfunction contar(...itens) {\n  return itens.length;\n}\n\nconsole.log(fila, contar(...fila));",
+    "help": "Adicione itens à fila.",
+    "challenge": "Crie um novo array sem alterar o original."
+  },
+  {
+    "id": "operador-ternario",
+    "title": "Escolher um valor em uma linha",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "4 min",
+    "keywords": [
+      "ternário",
+      "condição",
+      "if",
+      "else"
+    ],
+    "description": "O operador ternário escolhe entre dois valores quando a decisão é simples.",
+    "explanation": "A condição vem antes de ?, seguida pelo valor verdadeiro e pelo valor alternativo.",
+    "starter": "const estoque = 3;\nconst aviso = estoque === 0 ? \"Esgotado\" : \"Disponível\";\n\nconsole.log(aviso);",
+    "help": "Teste estoque igual a zero.",
+    "challenge": "Crie uma mensagem para estoque baixo."
+  },
+  {
+    "id": "switch",
+    "title": "Comparar várias opções",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "switch",
+      "case",
+      "decisão"
+    ],
+    "description": "switch organiza decisões que dependem de uma opção entre várias possibilidades.",
+    "explanation": "Cada case trata um valor e break impede a execução dos casos seguintes.",
+    "starter": "const turno = \"tarde\";\nlet mensagem;\n\nswitch (turno) {\n  case \"manhã\": mensagem = \"Bom dia\"; break;\n  case \"tarde\": mensagem = \"Boa tarde\"; break;\n  default: mensagem = \"Olá\";\n}\n\nconsole.log(mensagem);",
+    "help": "Troque o turno.",
+    "challenge": "Adicione um caso para a noite."
+  },
+  {
+    "id": "while-do-while",
+    "title": "Repetir enquanto uma condição vale",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "while",
+      "do while",
+      "loop"
+    ],
+    "description": "while repete enquanto a condição for verdadeira; do...while executa uma vez antes de testar.",
+    "explanation": "Atualize o estado dentro do laço para evitar repetições infinitas.",
+    "starter": "let tentativa = 1;\nwhile (tentativa <= 3) {\n  console.log(`Tentativa ${tentativa}`);\n  tentativa++;\n}",
+    "help": "Mude o limite de tentativas.",
+    "challenge": "Use do...while para mostrar a primeira tentativa."
+  },
+  {
+    "id": "for-of-in",
+    "title": "Percorrer valores e propriedades",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "for of",
+      "for in",
+      "iteração"
+    ],
+    "description": "for...of percorre valores iteráveis; for...in percorre nomes de propriedades.",
+    "explanation": "Escolha for...of para arrays e for...in para inspecionar chaves de objetos.",
+    "starter": "const produto = { nome: \"sensor\", estoque: 8 };\n\nfor (const chave in produto) {\n  console.log(chave, produto[chave]);\n}",
+    "help": "Adicione uma propriedade.",
+    "challenge": "Percorra um array com for...of."
+  },
+  {
+    "id": "arrow-functions",
+    "title": "Escrever funções curtas",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "arrow function",
+      "função de seta",
+      "callback"
+    ],
+    "description": "Arrow functions são uma forma compacta de declarar funções, muito usada em callbacks.",
+    "explanation": "Quando há uma expressão única, o retorno pode ficar implícito entre parênteses.",
+    "starter": "const dobrar = (valor) => valor * 2;\nconst valores = [2, 4, 6];\n\nconsole.log(valores.map(dobrar));",
+    "help": "Troque a operação.",
+    "challenge": "Crie uma função que transforme quilômetros em metros."
+  },
+  {
+    "id": "escopo-closure",
+    "title": "Entender escopo e closure",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "6 min",
+    "keywords": [
+      "escopo",
+      "closure",
+      "let",
+      "const"
+    ],
+    "description": "Escopo define onde uma variável existe. Uma closure mantém acesso ao ambiente onde foi criada.",
+    "explanation": "Funções internas podem lembrar valores mesmo depois que a função externa terminou.",
+    "starter": "function criarContador() {\n  let total = 0;\n  return () => ++total;\n}\n\nconst contar = criarContador();\nconsole.log(contar(), contar());",
+    "help": "Observe o contador crescer.",
+    "challenge": "Crie um contador que comece em outro número."
+  },
+  {
+    "id": "this-metodos",
+    "title": "Usar this em objetos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "this",
+      "método",
+      "objeto"
+    ],
+    "description": "Dentro de um método, this aponta para o objeto que chamou a função.",
+    "explanation": "A forma como a função é chamada importa para o valor de this.",
+    "starter": "const entrega = {\n  destino: \"Bloco A\",\n  resumo() { return `Entrega para ${this.destino}`; }\n};\n\nconsole.log(entrega.resumo());",
+    "help": "Troque o destino.",
+    "challenge": "Adicione uma propriedade de prazo."
+  },
+  {
+    "id": "strings-metodos",
+    "title": "Transformar textos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "string",
+      "trim",
+      "includes",
+      "toUpperCase"
+    ],
+    "description": "Métodos de string ajudam a limpar, buscar e transformar textos.",
+    "explanation": "Métodos como trim, includes e toUpperCase devolvem novos valores sem alterar o texto original.",
+    "starter": "const nome = \"  sensor azul  \";\nconst limpo = nome.trim();\n\nconsole.log(limpo.toUpperCase());\nconsole.log(limpo.includes(\"azul\"));",
+    "help": "Troque o nome.",
+    "challenge": "Verifique se o texto contém outra palavra."
+  },
+  {
+    "id": "numbers-math",
+    "title": "Calcular com Number e Math",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "Number",
+      "Math",
+      "round",
+      "random",
+      "número"
+    ],
+    "description": "Number e Math reúnem conversões e operações numéricas comuns.",
+    "explanation": "Use Number para converter entradas e Math para arredondar ou calcular.",
+    "starter": "const entrada = \"12.6\";\nconst valor = Number(entrada);\n\nconsole.log(Math.round(valor));\nconsole.log(Math.max(4, 9, 2));",
+    "help": "Mude a entrada.",
+    "challenge": "Calcule o menor valor com Math.min."
+  },
+  {
+    "id": "date-time",
+    "title": "Trabalhar com datas",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "Date",
+      "data",
+      "hora",
+      "ISO"
+    ],
+    "description": "Date representa um instante e permite gerar formatos para registrar eventos.",
+    "explanation": "O formato ISO é útil para trocar datas entre sistemas.",
+    "starter": "const entrega = new Date(\"2026-11-20T14:30:00\");\n\nconsole.log(entrega.toISOString());\nconsole.log(entrega.getHours());",
+    "help": "Troque o horário.",
+    "challenge": "Mostre também o dia do mês."
+  },
+  {
+    "id": "array-metodos",
+    "title": "Transformar arrays",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "6 min",
+    "keywords": [
+      "array",
+      "map",
+      "filter",
+      "reduce",
+      "find"
+    ],
+    "description": "Métodos de array expressam transformações, filtros, buscas e acúmulos.",
+    "explanation": "Cada método comunica uma intenção e pode ser combinado com funções pequenas.",
+    "starter": "const valores = [10, 20, 30];\nconst total = valores.reduce((soma, valor) => soma + valor, 0);\nconst maiores = valores.filter((valor) => valor > 15);\n\nconsole.log({ total, maiores });",
+    "help": "Mude os valores e o limite.",
+    "challenge": "Calcule uma média com reduce."
+  },
+  {
+    "id": "object-metodos",
+    "title": "Inspecionar objetos",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "5 min",
+    "keywords": [
+      "Object.keys",
+      "Object.values",
+      "Object.entries",
+      "objeto"
+    ],
+    "description": "Object.keys, values e entries transformam propriedades em listas fáceis de percorrer.",
+    "explanation": "Esses métodos ajudam a contar, exibir e validar dados estruturados.",
+    "starter": "const sensor = { id: \"TMP-07\", ativo: true, valor: 26.4 };\n\nconsole.log(Object.keys(sensor));\nconsole.log(Object.values(sensor));",
+    "help": "Adicione uma propriedade.",
+    "challenge": "Percorra Object.entries com for...of."
+  },
+  {
+    "id": "map-set",
+    "title": "Usar Map e Set",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "6 min",
+    "keywords": [
+      "Map",
+      "Set",
+      "coleção",
+      "valores únicos"
+    ],
+    "description": "Map associa chaves a valores; Set guarda valores sem repetição.",
+    "explanation": "Eles são úteis quando um objeto ou array não expressa bem a intenção da coleção.",
+    "starter": "const setores = new Map([[\"A1\", \"expedição\"], [\"B2\", \"estoque\"]]);\nconst etiquetas = new Set([\"azul\", \"azul\", \"urgente\"]);\n\nconsole.log(setores.get(\"A1\"));\nconsole.log([...etiquetas]);",
+    "help": "Adicione um setor ou etiqueta.",
+    "challenge": "Verifique se o Set possui “urgente”."
+  },
+  {
+    "id": "classes",
+    "title": "Modelar objetos com classes",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "7 min",
+    "keywords": [
+      "class",
+      "constructor",
+      "método",
+      "orientação a objetos"
+    ],
+    "description": "Classes reúnem dados e comportamentos para criar objetos com a mesma estrutura.",
+    "explanation": "constructor prepara a instância; métodos descrevem ações que ela sabe realizar.",
+    "starter": "class Pacote {\n  constructor(codigo) { this.codigo = codigo; }\n  etiqueta() { return `Pacote ${this.codigo}`; }\n}\n\nconsole.log(new Pacote(\"JS-042\").etiqueta());",
+    "help": "Troque o código.",
+    "challenge": "Adicione um método para informar o destino."
+  },
+  {
+    "id": "regex",
+    "title": "Encontrar padrões em texto",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "6 min",
+    "keywords": [
+      "RegExp",
+      "regex",
+      "match",
+      "test"
+    ],
+    "description": "Expressões regulares descrevem padrões para validar ou localizar partes de textos.",
+    "explanation": "Use test para uma resposta booleana e match quando quiser capturar ocorrências.",
+    "starter": "const codigo = \"SEN-204\";\nconst padrao = /^[A-Z]{3}-\\d{3}$/;\n\nconsole.log(padrao.test(codigo));",
+    "help": "Teste outro código.",
+    "challenge": "Crie um padrão para um CEP simples."
+  },
+  {
+    "id": "symbols-bigint",
+    "title": "Conhecer Symbol e BigInt",
+    "category": "essencial",
+    "categoryLabel": "Essencial",
+    "duration": "4 min",
+    "keywords": [
+      "Symbol",
+      "BigInt",
+      "tipos"
+    ],
+    "description": "Symbol cria identificadores únicos; BigInt representa inteiros muito grandes.",
+    "explanation": "São tipos específicos para situações que números comuns ou strings não resolvem bem.",
+    "starter": "const identificador = Symbol(\"interno\");\nconst distancia = 9007199254740993n;\n\nconsole.log(typeof identificador);\nconsole.log(typeof distancia);",
+    "help": "Altere o valor BigInt mantendo o n.",
+    "challenge": "Compare dois Symbols e observe o resultado."
+  },
+  {
+    "id": "dom-seletores",
+    "title": "Encontrar elementos no DOM",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "5 min",
+    "keywords": [
+      "DOM",
+      "querySelector",
+      "getElementById"
+    ],
+    "description": "Seletores conectam o JavaScript aos elementos existentes na página.",
+    "explanation": "querySelector encontra o primeiro elemento que corresponde a um seletor CSS.",
+    "starter": "const titulo = document.createElement(\"h3\");\ntitulo.id = \"resultado\";\ntitulo.textContent = \"Elemento encontrado\";\ndocument.body.append(titulo);\n\nconsole.log(document.querySelector(\"#resultado\").textContent);",
+    "help": "Troque o seletor.",
+    "challenge": "Crie dois elementos e encontre apenas um deles."
+  },
+  {
+    "id": "dom-classes-atributos",
+    "title": "Alterar classes e atributos",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "5 min",
+    "keywords": [
+      "classList",
+      "setAttribute",
+      "dataset",
+      "DOM"
+    ],
+    "description": "classList e atributos permitem refletir estado e informações nos elementos da página.",
+    "explanation": "A interface DOM oferece métodos para adicionar, remover e consultar classes.",
+    "starter": "const aviso = document.createElement(\"p\");\naviso.textContent = \"Entrega urgente\";\naviso.classList.add(\"urgente\");\naviso.setAttribute(\"data-prioridade\", \"alta\");\ndocument.body.append(aviso);\n\nconsole.log(aviso.dataset.prioridade);",
+    "help": "Troque a prioridade.",
+    "challenge": "Adicione uma segunda classe."
+  },
+  {
+    "id": "eventos",
+    "title": "Responder a eventos",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "6 min",
+    "keywords": [
+      "addEventListener",
+      "click",
+      "evento",
+      "DOM"
+    ],
+    "description": "Eventos avisam quando uma ação acontece, como um clique ou uma entrada no formulário.",
+    "explanation": "addEventListener registra uma função sem substituir outros ouvintes do mesmo elemento.",
+    "starter": "const botao = document.createElement(\"button\");\nbotao.textContent = \"Clique aqui\";\ndocument.body.append(botao);\n\nbotao.addEventListener(\"click\", () => {\n  console.log(\"O botão foi clicado.\");\n});\n\nconsole.log(\"Experimente clicar no botão.\");",
+    "help": "Clique no botão criado.",
+    "challenge": "Mude o texto e registre uma segunda mensagem."
+  },
+  {
+    "id": "formularios",
+    "title": "Ler entradas de formulário",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "6 min",
+    "keywords": [
+      "form",
+      "input",
+      "value",
+      "submit"
+    ],
+    "description": "JavaScript pode ler valores digitados e validar uma ação antes de continuar.",
+    "explanation": "O valor de um campo fica em sua propriedade value.",
+    "starter": "const campo = document.createElement(\"input\");\ncampo.placeholder = \"Digite seu nome\";\nconst botao = document.createElement(\"button\");\nbotao.textContent = \"Saudar\";\ndocument.body.append(campo, botao);\n\nbotao.addEventListener(\"click\", () => console.log(`Olá, ${campo.value || \"pessoa\"}!`));",
+    "help": "Digite algo e clique.",
+    "challenge": "Impeça a saudação quando o campo estiver vazio."
+  },
+  {
+    "id": "timers",
+    "title": "Agendar tarefas no navegador",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "5 min",
+    "keywords": [
+      "setTimeout",
+      "setInterval",
+      "timer",
+      "tempo"
+    ],
+    "description": "Timers executam uma função depois de um tempo ou repetidamente.",
+    "explanation": "Use clearInterval para encerrar uma repetição e evitar trabalho desnecessário.",
+    "starter": "console.log(\"Começou\");\nsetTimeout(() => console.log(\"Aconteceu depois\"), 300);",
+    "help": "Mude o atraso com cuidado.",
+    "challenge": "Crie uma mensagem final depois de duas etapas."
+  },
+  {
+    "id": "storage",
+    "title": "Guardar dados no navegador",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "5 min",
+    "keywords": [
+      "localStorage",
+      "sessionStorage",
+      "persistência"
+    ],
+    "description": "localStorage guarda pequenos dados no navegador e pode ser lido em outra visita.",
+    "explanation": "Os valores são strings, então JSON ajuda a armazenar arrays e objetos.",
+    "starter": "const preferencia = { tema: \"claro\", fonte: 16 };\nlocalStorage.setItem(\"preferencia\", JSON.stringify(preferencia));\n\nconsole.log(JSON.parse(localStorage.getItem(\"preferencia\")));",
+    "help": "Mude a preferência.",
+    "challenge": "Remova a chave com removeItem depois de ler."
+  },
+  {
+    "id": "fetch",
+    "title": "Buscar dados com fetch",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "7 min",
+    "keywords": [
+      "fetch",
+      "request",
+      "response",
+      "API"
+    ],
+    "description": "fetch representa uma requisição HTTP e devolve uma Promise com a resposta.",
+    "explanation": "Depois de verificar response.ok, use response.json para ler dados estruturados.",
+    "starter": "const resposta = new Response(JSON.stringify({ status: \"ok\", itens: 3 }), {\n  headers: { \"Content-Type\": \"application/json\" }\n});\n\nresposta.json().then((dados) => console.log(dados));",
+    "help": "Troque os dados simulados.",
+    "challenge": "Mostre apenas a quantidade de itens."
+  },
+  {
+    "id": "url-query",
+    "title": "Ler URLs e parâmetros",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "5 min",
+    "keywords": [
+      "URL",
+      "URLSearchParams",
+      "query string"
+    ],
+    "description": "URL e URLSearchParams facilitam a leitura e a montagem de endereços com parâmetros.",
+    "explanation": "Em vez de cortar strings manualmente, use interfaces próprias para cada parte da URL.",
+    "starter": "const endereco = new URL(\"https://exemplo.test/sensores?local=estufa&ativo=true\");\n\nconsole.log(endereco.pathname);\nconsole.log(endereco.searchParams.get(\"local\"));",
+    "help": "Troque os parâmetros.",
+    "challenge": "Adicione um parâmetro para o limite."
+  },
+  {
+    "id": "clipboard",
+    "title": "Copiar e compartilhar texto",
+    "category": "navegador",
+    "categoryLabel": "Navegador",
+    "duration": "4 min",
+    "keywords": [
+      "clipboard",
+      "navigator",
+      "texto"
+    ],
+    "description": "A Clipboard API permite copiar texto quando o navegador e a permissão autorizam a ação.",
+    "explanation": "Interfaces do navegador podem depender de contexto seguro e interação do usuário.",
+    "starter": "const texto = \"JS-042 pronto para envio\";\nconsole.log(`Texto preparado: ${texto}`);\nconsole.log(\"Em uma página real, navigator.clipboard.writeText copiaria o valor.\");",
+    "help": "Troque a mensagem.",
+    "challenge": "Explique por que a ação depende do navegador."
+  },
+  {
+    "id": "modulos-esm",
+    "title": "Organizar código em módulos",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "6 min",
+    "keywords": [
+      "import",
+      "export",
+      "ES modules",
+      "módulos"
+    ],
+    "description": "Módulos dividem responsabilidades e permitem reutilizar funções entre arquivos.",
+    "explanation": "export torna um valor disponível; import traz esse valor para outro módulo.",
+    "starter": "const modulo = {\n  exporta: [\"calcularFrete\", \"formatarPedido\"],\n  importa: \"calcularFrete\"\n};\n\nconsole.log(\"Um módulo pode exportar:\", modulo.exporta);",
+    "help": "Adicione outra função exportada.",
+    "challenge": "Desenhe a divisão entre dois módulos."
+  },
+  {
+    "id": "process-env",
+    "title": "Ler configuração de ambiente",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "5 min",
+    "keywords": [
+      "process.env",
+      "ambiente",
+      "configuração",
+      "Node.js"
+    ],
+    "description": "Em Node.js, variáveis de ambiente separam configuração do código.",
+    "explanation": "O playground simula a ideia sem acessar o ambiente real da máquina.",
+    "starter": "const ambiente = { PORTA: \"3000\", MODO: \"desenvolvimento\" };\n\nconsole.log(`Servidor na porta ${ambiente.PORTA}`);\nconsole.log(ambiente.MODO);",
+    "help": "Troque o modo.",
+    "challenge": "Adicione uma configuração de banco simulada."
+  },
+  {
+    "id": "path-files",
+    "title": "Pensar em arquivos no Node.js",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "6 min",
+    "keywords": [
+      "node:fs",
+      "node:path",
+      "arquivo",
+      "Node.js"
+    ],
+    "description": "O Node.js oferece módulos para caminhos e arquivos; aqui a ideia é modelada com dados seguros.",
+    "explanation": "Separar o caminho do conteúdo ajuda a organizar operações de leitura e escrita.",
+    "starter": "const arquivo = {\n  caminho: \"dados/sensores.json\",\n  conteudo: JSON.stringify({ total: 3 })\n};\n\nconsole.log(arquivo.caminho);\nconsole.log(arquivo.conteudo);",
+    "help": "Mude o caminho.",
+    "challenge": "Modele uma lista de arquivos de configuração."
+  },
+  {
+    "id": "http-status",
+    "title": "Entender request e response",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "6 min",
+    "keywords": [
+      "HTTP",
+      "status",
+      "request",
+      "response",
+      "API"
+    ],
+    "description": "Uma API recebe uma requisição e devolve uma resposta com status e dados.",
+    "explanation": "O status comunica se a operação funcionou, falhou ou criou um recurso.",
+    "starter": "const requisicao = { metodo: \"GET\", rota: \"/sensores\" };\nconst resposta = { status: 200, corpo: [{ id: \"TMP-07\" }] };\n\nconsole.log(requisicao);\nconsole.log(resposta);",
+    "help": "Troque o método ou rota.",
+    "challenge": "Modele a resposta de criação com status 201."
+  },
+  {
+    "id": "validacao-json",
+    "title": "Validar dados JSON",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "5 min",
+    "keywords": [
+      "JSON.parse",
+      "JSON.stringify",
+      "serialização"
+    ],
+    "description": "JSON.stringify transforma dados em texto; JSON.parse faz o caminho inverso.",
+    "explanation": "Ao receber texto externo, trate erros de parse antes de usar as propriedades.",
+    "starter": "const texto = JSON.stringify({ pedido: \"JS-042\", itens: 2 });\nconst dados = JSON.parse(texto);\n\nconsole.log(dados.pedido, dados.itens);",
+    "help": "Altere o objeto original.",
+    "challenge": "Use try/catch para um JSON inválido."
+  },
+  {
+    "id": "callbacks",
+    "title": "Passar funções como dados",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "5 min",
+    "keywords": [
+      "callback",
+      "função",
+      "higher-order"
+    ],
+    "description": "Funções podem ser guardadas em variáveis e passadas para outras funções.",
+    "explanation": "Esse padrão aparece em eventos, métodos de array e APIs assíncronas.",
+    "starter": "function aplicar(valor, operacao) {\n  return operacao(valor);\n}\n\nconsole.log(aplicar(5, (numero) => numero * 3));",
+    "help": "Troque a operação.",
+    "challenge": "Passe uma função que arredonde um valor."
+  },
+  {
+    "id": "promises-all",
+    "title": "Coordenar promessas",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "6 min",
+    "keywords": [
+      "Promise.all",
+      "promises",
+      "async",
+      "concorrência"
+    ],
+    "description": "Promise.all espera várias operações e devolve os resultados juntos quando todas terminam.",
+    "explanation": "Se uma promessa falhar, o conjunto falha; trate essa possibilidade quando necessário.",
+    "starter": "const estoque = Promise.resolve(8);\nconst pedidos = Promise.resolve(3);\n\nPromise.all([estoque, pedidos]).then(([totalEstoque, totalPedidos]) => {\n  console.log({ totalEstoque, totalPedidos });\n});",
+    "help": "Troque os valores resolvidos.",
+    "challenge": "Adicione uma terceira promessa."
+  },
+  {
+    "id": "erro-customizado",
+    "title": "Criar e tratar erros",
+    "category": "backend",
+    "categoryLabel": "Backend",
+    "duration": "5 min",
+    "keywords": [
+      "Error",
+      "throw",
+      "try catch",
+      "erro"
+    ],
+    "description": "Erros podem carregar uma mensagem clara para quem precisa corrigir o problema.",
+    "explanation": "throw interrompe o fluxo atual; catch pode registrar ou transformar a falha.",
+    "starter": "function validar(quantidade) {\n  if (quantidade < 1) throw new Error(\"Quantidade inválida\");\n  return \"Pedido aceito\";\n}\n\ntry {\n  console.log(validar(0));\n} catch (erro) {\n  console.log(erro.message);\n}",
+    "help": "Teste uma quantidade válida.",
+    "challenge": "Crie uma regra para o limite máximo."
   }
 ]

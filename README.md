@@ -25,6 +25,8 @@ O site possui aulas sobre:
 
 Os exemplos usam situações simples, como estoque, entregas, sensores e máquinas. Eles foram escritos para este projeto e apenas se inspiram nos temas estudados no [Curso SENAI](https://github.com/gabrielaraujo-eng/Curso_senai/tree/main/2_termo/BACKEND). Este site não é um material oficial do SENAI.
 
+Além da trilha guiada, o site mantém um catálogo de referência com 50 experimentos organizados em três grupos: JavaScript essencial, JavaScript no navegador e JavaScript para backend. Cada item combina uma explicação curta, código editável e um desafio para continuar testando.
+
 ## O que é o playground?
 
 O playground é a área em que você testa o código.
