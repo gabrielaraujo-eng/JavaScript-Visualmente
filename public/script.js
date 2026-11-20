@@ -36,6 +36,15 @@
     toggle.setAttribute('aria-label', collapsed ? 'Expandir catálogo JavaScript' : 'Minimizar catálogo JavaScript');
     if (persist) saveJson(storage.catalog, collapsed);
   }
+  function setMobileMenuOpen(open) {
+    const button = $('#menu-toggle');
+    const backdrop = $('#mobile-menu-backdrop');
+    document.body.classList.toggle('mobile-menu-open', open);
+    button?.setAttribute('aria-expanded', String(open));
+    button?.setAttribute('aria-label', open ? 'Fechar menu de recursos JavaScript' : 'Abrir menu de recursos JavaScript');
+    if (backdrop) backdrop.hidden = !open;
+    if (open) setCatalogCollapsed(false, true);
+  }
   function initTheme() {
     let saved = null;
     try { saved = localStorage.getItem(storage.theme); } catch {}
@@ -162,6 +171,12 @@
     initTheme();
     setCatalogCollapsed(readJson(storage.catalog, false));
     $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
+    $('#menu-toggle')?.addEventListener('click', () => {
+      if (window.innerWidth > 720) { $('#catalogo')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+      setMobileMenuOpen(!document.body.classList.contains('mobile-menu-open'));
+    });
+    $('#mobile-menu-backdrop')?.addEventListener('click', () => setMobileMenuOpen(false));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMobileMenuOpen(false); });
     document.querySelectorAll('a[href="#catalogo"]').forEach((link) => link.addEventListener('click', () => setCatalogCollapsed(false, true)));
     searchInput?.addEventListener('input', () => {
       renderList();
