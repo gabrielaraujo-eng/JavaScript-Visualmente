@@ -6,17 +6,12 @@
   const runStatus = $('#run-status');
   const completeButton = $('#complete-lesson');
   const searchInput = $('#lesson-search');
-  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1', catalog: 'jsvisual.catalog-drawer.v1' };
+  const storage = { theme: 'jsvisual.theme.v1', progress: 'jsvisual.progress.v1', catalog: 'jsvisual.catalog-collapsed.v2', groups: 'jsvisual.groups-collapsed.v1' };
   let lessons = [];
   let activeLesson = null;
   let category = 'all';
   let completed = readJson(storage.progress, []);
-  const categoryInfo = {
-    all: { label: 'Todos os recursos', icon: '✦' },
-    essencial: { label: 'JavaScript essencial', icon: '⚡' },
-    navegador: { label: 'JavaScript no navegador', icon: '◉' },
-    backend: { label: 'JavaScript para backend', icon: '▣' }
-  };
+  let collapsedGroups = readJson(storage.groups, {});
 
   function readJson(key, fallback) {
     try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
@@ -34,12 +29,9 @@
     const sidebar = $('.lesson-sidebar');
     const layout = $('.lesson-layout');
     const toggle = $('#catalog-toggle');
-    const backdrop = $('#sidebar-backdrop');
     if (!sidebar || !layout || !toggle) return;
     sidebar.classList.toggle('is-collapsed', collapsed);
     layout.classList.toggle('is-sidebar-collapsed', collapsed);
-    document.body.classList.toggle('sidebar-open', !collapsed);
-    if (backdrop) backdrop.hidden = collapsed;
     toggle.setAttribute('aria-expanded', String(!collapsed));
     toggle.setAttribute('aria-label', collapsed ? 'Expandir catálogo JavaScript' : 'Minimizar catálogo JavaScript');
     if (persist) saveJson(storage.catalog, collapsed);
@@ -59,32 +51,10 @@
       return (category === 'all' || lesson.category === category) && (!query || text.includes(query));
     });
   }
-  function renderCatalogIndex() {
-    const index = $('#catalog-index');
-    if (!index) return;
-    index.innerHTML = `<p class="catalog-index-title">ÍNDICE COMPLETO</p><p class="catalog-index-intro">Vá direto para o tema que você quer estudar:</p>`;
-    Object.entries(categoryInfo).forEach(([value, info]) => {
-      const count = value === 'all' ? lessons.length : lessons.filter((lesson) => lesson.category === value).length;
-      const button = document.createElement('button');
-      button.className = `index-card${category === value ? ' is-active' : ''}`;
-      button.type = 'button';
-      button.setAttribute('aria-pressed', String(category === value));
-      button.innerHTML = `<span class="index-card-icon" aria-hidden="true">${info.icon}</span><span>${info.label}</span><b>${count}</b>`;
-      button.addEventListener('click', () => {
-        category = value;
-        document.querySelectorAll('[data-category]').forEach((item) => { const selected = item.dataset.category === value; item.classList.toggle('is-selected', selected); item.setAttribute('aria-pressed', String(selected)); });
-        renderList();
-        const first = visibleLessons()[0];
-        if (first && !visibleLessons().some((lesson) => lesson.id === activeLesson?.id)) selectLesson(first.id);
-      });
-      index.append(button);
-    });
-  }
   function renderList() {
     const visible = visibleLessons();
     $('#lesson-total').textContent = `${visible.length}/${lessons.length}`;
     $('#empty-search').hidden = Boolean(visible.length);
-    renderCatalogIndex();
     lessonList.innerHTML = '';
     const groupLabels = { essencial: 'JavaScript essencial', navegador: 'No navegador', backend: 'Para backend' };
     const groupOrder = ['essencial', 'navegador', 'backend'];
@@ -92,10 +62,12 @@
       const groupLessons = visible.filter((lesson) => lesson.category === group);
       if (!groupLessons.length) return;
       const section = document.createElement('section');
-      section.className = 'lesson-group';
+      const isCollapsed = Boolean(collapsedGroups[group]);
+      section.className = `lesson-group${isCollapsed ? ' is-collapsed' : ''}`;
       const heading = document.createElement('div');
       heading.className = 'lesson-group-heading';
-      heading.innerHTML = `<span>${groupLabels[group]}</span><b>${groupLessons.length}</b>`;
+      heading.innerHTML = `<button class="lesson-group-toggle" type="button" aria-expanded="${String(!isCollapsed)}"><span>${groupLabels[group]}</span><b>${groupLessons.length}</b><span class="group-chevron" aria-hidden="true">⌄</span></button>`;
+      heading.querySelector('.lesson-group-toggle').addEventListener('click', () => { collapsedGroups[group] = !collapsedGroups[group]; saveJson(storage.groups, collapsedGroups); renderList(); });
       section.append(heading);
       groupLessons.forEach((lesson) => {
         const link = document.createElement('a');
@@ -188,9 +160,8 @@
   }
   function setup() {
     initTheme();
-    setCatalogCollapsed(readJson(storage.catalog, window.matchMedia?.('(max-width: 720px)').matches ?? false));
+    setCatalogCollapsed(readJson(storage.catalog, false));
     $('#catalog-toggle')?.addEventListener('click', () => setCatalogCollapsed(!$('.lesson-sidebar')?.classList.contains('is-collapsed'), true));
-    $('#sidebar-backdrop')?.addEventListener('click', () => setCatalogCollapsed(true, true));
     document.querySelectorAll('a[href="#catalogo"]').forEach((link) => link.addEventListener('click', () => setCatalogCollapsed(false, true)));
     searchInput?.addEventListener('input', () => {
       renderList();
