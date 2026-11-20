@@ -73,6 +73,6 @@ A organização e a apresentação foram inspiradas por projetos do próprio aut
 
 Projeto acadêmico e autoral de Gabriel Araújo.
 
-## Outros projetos
+## Criador
 
-Veja outros projetos do autor no [perfil de Gabriel Araújo no GitHub](https://github.com/gabrielaraujo-eng).
+Criado por [Gabriel Araújo](https://github.com/gabrielaraujo-eng).
