@@ -164,10 +164,13 @@ button { color: inherit; }
 .filter-chip.is-selected { color: #1e1c19; border-color: var(--amber); background: var(--amber); }
 .lesson-layout { display: grid; grid-template-columns: minmax(250px, .36fr) minmax(0, .94fr); align-items: start; gap: 15px; }
 .lesson-sidebar, .lab-panel { border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--panel); }
-.lesson-sidebar { position: sticky; top: 16px; overflow: hidden; }
+.lesson-sidebar { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: hidden; }
 .sidebar-heading { min-height: 53px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 15px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 9px; font-weight: 850; letter-spacing: .13em; }
 .lesson-total { padding: 3px 8px; border-radius: 999px; color: var(--ink-soft); background: var(--panel-raised); letter-spacing: 0; }
-.lesson-list { display: grid; padding: 6px; }
+.lesson-list { display: grid; gap: 10px; max-height: calc(100vh - 100px); overflow-y: auto; overscroll-behavior: contain; padding: 8px 6px 10px; scrollbar-color: var(--line-strong) transparent; }
+.lesson-group { display: grid; gap: 3px; }
+.lesson-group-heading { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 29px; padding: 3px 8px; color: var(--muted); background: var(--panel); font-size: 8px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+.lesson-group-heading b { min-width: 20px; padding: 2px 5px; border-radius: 99px; color: var(--ink-soft); background: var(--panel-raised); font-size: 8px; text-align: center; letter-spacing: 0; }
 .lesson-card { min-height: 63px; display: grid; grid-template-columns: 28px minmax(0,1fr) 15px; align-items: center; gap: 9px; padding: 9px 8px; border: 1px solid transparent; border-radius: 11px; color: inherit; text-decoration: none; transition: background .15s, border-color .15s; }
 .lesson-card:hover { background: var(--panel-raised); }
 .lesson-card.is-active { border-color: rgba(255,209,93,.22); background: rgba(255,209,93,.075); }
@@ -257,7 +260,8 @@ button { color: inherit; }
   .section-heading > p { max-width: 55ch; font-size: 12px; }
   .search-box { width: 100%; }
   .lesson-layout { grid-template-columns: 1fr; }
-  .lesson-sidebar { position: static; }
+  .lesson-sidebar { position: static; max-height: none; }
+  .lesson-list { max-height: none; overflow: visible; }
   .lesson-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .list-note { grid-column: 1 / -1; }
 }
