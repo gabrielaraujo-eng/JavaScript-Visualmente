@@ -85,7 +85,7 @@
     const lesson = lessons.find((item) => item.id === id);
     if (!lesson) return;
     activeLesson = lesson;
-    $('#lesson-category').textContent = lesson.categoryLabel.toUpperCase();
+    $('#lesson-category').textContent = String(lesson.categoryLabel || lesson.category || 'JavaScript').toUpperCase();
     $('#lesson-title').textContent = lesson.title;
     $('#lesson-description').textContent = lesson.description;
     $('#lesson-explanation').textContent = lesson.explanation;
@@ -176,7 +176,7 @@
     try {
       const response = await fetch('public/data/lessons.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('Não foi possível carregar as aulas.');
-      lessons = await response.json();
+      lessons = (await response.json()).map((lesson) => ({ ...lesson, categoryLabel: lesson.categoryLabel || lesson.category || 'JavaScript' }));
       updateProgress();
       selectLesson(lessons[0].id);
     } catch (error) {
